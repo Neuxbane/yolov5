@@ -1,0 +1,5 @@
+train: traineer/AksaraJawa/dataset/images/train/
+val: traineer/AksaraJawa/dataset/images/val/
+
+nc: 20
+names: ['ha','na','ca','ra','ka','da','ta','sa','wa','la','pa','dha','ja','ya','nya','ma','ga','ba','tha','nga']

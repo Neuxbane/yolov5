@@ -1,0 +1,5 @@
+train: traineer/ArrowDetection/dataset/images/train/
+val: traineer/ArrowDetection/dataset/images/val/
+
+nc: 4
+names: ['up','down','right','left']
