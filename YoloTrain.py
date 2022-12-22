@@ -24,5 +24,8 @@ img = img if u=='' else u
 batch = '16'
 u = input(f"batch({batch})?")
 batch = batch if u=='' else u
-os.system(f"python3 train.py --img {img} --batch {batch} --epochs {epochs} --data {data} --weights {weights} --hyp {hyp} --cache")
-os.system(f"cp runs/train/{os.listdir('runs/train')[-1]}/weights/best.pt {trainFolder}/weights.pt")
+
+print(f"run `python train.py --img {img} --batch {batch} --epochs {epochs} --data {data} --weights {weights} --hyp {hyp} --cache && cp runs/train/{'exp' if (len(os.listdir('runs/train'))==0) else os.listdir('runs/train')[-1]}/weights/best.pt {trainFolder}weights.pt`")
+os.system(f"( python train.py --img {img} --batch {batch} --epochs {epochs} --data {data} --weights {weights} --hyp {hyp} --cache ) && ( cp runs/train/{'exp' if (len(os.listdir('runs/train'))==0) else os.listdir('runs/train')[-1]}/weights/best.pt {trainFolder}weights.pt )")
+
+# subprocess.call(f"cp runs/train/{'exp' if (len(os.listdir('runs/train'))==0) else os.listdir('runs/train')[-1]}/weights/best.pt {trainFolder}/weights.pt")
