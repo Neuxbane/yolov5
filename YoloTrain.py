@@ -17,7 +17,7 @@ epochs = '3'
 u = input(f"epochs({epochs})?")
 epochs = epochs if u=='' else (epochs if int(u)<1 else u)
 
-img = '640'
+img = '160'
 u = input(f"img({img})?")
 img = img if u=='' else u
 
